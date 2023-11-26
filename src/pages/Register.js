@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { Link, Navigate } from 'react-router-dom';
 import UserContext from '../UserContext';
+import Swal from 'sweetalert2';
 
 export default function Register() {
 	const {user} = useContext(UserContext);
