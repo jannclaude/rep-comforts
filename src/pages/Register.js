@@ -6,6 +6,17 @@ import UserContext from '../UserContext';
 export default function Register() {
 	const {user} = useContext(UserContext);
 
+	const Toast = Swal.mixin({
+		toast: true,
+		position: "top-end",
+		showConfirmButton: false,
+		timer: 1500,
+		didOpen: (toast) => {
+		  toast.onmouseenter = Swal.stopTimer;
+		  toast.onmouseleave = Swal.resumeTimer;
+		}
+	});
+
 	// State hooks to store the values of the input field
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("")
@@ -67,11 +78,17 @@ export default function Register() {
 			setShippingAddress('');
 			
 
-			alert("Thank you for registering!")
+			Toast.fire({
+				title: "Sign up successful!",
+				icon: "success",
+			});
 
 		} else {
 			
-			alert("Please try again later.")
+			Toast.fire({
+				title: "Sign up failed. Try again.",
+				icon: "error",
+			});
 		}
 
 		})
