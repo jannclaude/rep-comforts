@@ -333,3 +333,12 @@ button:hover {
     position: relative; /* <-- Added */
     z-index: 1; /* <-- Added */
 }
+
+.profilePadding {
+	padding-right: 3rem;
+	padding-left: 3rem;
+	@media (max-width: 576px) {
+		padding-right: 0rem;
+		padding-left: 0rem;
+	};
+}

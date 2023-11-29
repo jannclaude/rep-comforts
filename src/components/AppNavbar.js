@@ -1,7 +1,7 @@
 import { Button, Container, Form, ListGroup, Modal, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { HiShoppingCart, HiMenu } from "react-icons/hi";
+import { HiMenu } from "react-icons/hi";
 import { RiAccountBoxFill } from "react-icons/ri";
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import UserContext from '../UserContext';
 import { Link } from 'react-router-dom';
 import { debounce } from 'lodash';
@@ -122,6 +122,12 @@ export default function NavScroll() {
  	const handleCloseModal = () => setShowModal(false);
 
 	return (
+		
+		<div class="blurred-overlay d-flex flex-row fixed-top container-fluid">
+		<div class="blur d-flex flex-row container-fluid"></div>
+		
+		
+	
 		<Navbar fixed="top" className="bg-transparent flexnav" expand="md">
 			<Container fluid className="bg-transparent">
 			<Navbar.Brand as={Link} to="/" exact className="bg-transparent"><img src="../logo192.png" height="90px" className="ps-3 bg-transparent" alt="logo"/></Navbar.Brand>
@@ -231,9 +237,7 @@ export default function NavScroll() {
 			</Modal>
 
 		</Navbar>
-
-
-
+		</div>
 
 	);
 }

@@ -1,5 +1,4 @@
 import NavScroll from './components/AppNavbar';
-import Blur from './components/Blur';
 
 import Cart from './components/Cart';
 import Error from './pages/Error';
@@ -65,7 +64,7 @@ function App() {
 	return (
 		<UserProvider value={{ user, setUser, unsetUser }}>
 			<Router>
-				<Blur />
+				<NavScroll />
 				<Container fluid className="p-0">
 					<Routes>
 						<Route path="/" element={<Home />} />

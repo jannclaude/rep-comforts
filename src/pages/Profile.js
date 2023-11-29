@@ -224,7 +224,7 @@ export default function Profile(){
 		<>
 			<Row className="g-0">
 				<Col className="profileHeader bg-light text-dark">
-					<div className="ps-5 pe-5">
+					<div className="profilePadding">
 						<div className="d-flex">
 							<img className="rounded-circle" width={150} src="https://cdn-icons-png.flaticon.com/512/149/149071.png" />
 							<h2 className="mt-3 ms-3 align-self-center"><strong>{`${details.firstName} ${details.lastName}`}</strong></h2>
