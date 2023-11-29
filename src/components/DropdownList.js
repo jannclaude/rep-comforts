@@ -10,7 +10,7 @@ export default function DropdownList({prodProp}) {
     return(
         <ListGroup.Item as={Link} to={`/products/${_id}`} className="d-flex gap-2 list-group-item-action">
             <div>
-                <img src={image} height="40px" />
+                <img src={image} height="40px" className="rounded" />
             </div>
             <div>{nameProduct}</div>
         </ListGroup.Item>
