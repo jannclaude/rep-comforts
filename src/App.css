@@ -288,7 +288,7 @@ button:hover {
 	font-weight: 800 !important;
 }
 
-.list-group-item:hover {
+.searchNav .list-group-item:hover {
 	background-color: #202459 !important;
 	opacity: 100%;
 	color: white !important;

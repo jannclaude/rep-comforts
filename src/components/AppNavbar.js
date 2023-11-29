@@ -127,7 +127,7 @@ export default function NavScroll() {
 			<Navbar.Brand as={Link} to="/" exact className="bg-transparent"><img src="../logo192.png" height="90px" className="ps-3 bg-transparent" alt="logo"/></Navbar.Brand>
 			<Navbar.Toggle aria-controls="navbarScroll" className="navbar-toggler"><HiMenu size={25} className="bg-transparent"/></Navbar.Toggle>
 			<Navbar.Collapse className="bg-transparent" id="navbarScroll">
-				<Nav className="ms-auto gap-2 my-2 my-lg-0 bg-transparent" style={{ maxHeight: '100px' }} navbarScroll>
+				<Nav className="searchNav ms-auto gap-2 my-2 my-lg-0 bg-transparent" style={{ maxHeight: '100px' }} navbarScroll>
 					<Form className="position-relative">
 						<Form.Control
 							type="search"
