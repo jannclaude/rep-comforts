@@ -17,7 +17,7 @@ export default function Home() {
 		<>
 			
 			<div className="homeWallpaper">
-			<video className="video-background" autoPlay loop muted>
+			<video className="video-background" playsInline autoPlay loop muted>
 			<source
 				// src="https://cdn.coverr.co/videos/coverr-kitchen-in-a-house-6113/1080p.mp4"
 				src="https://cdn.coverr.co/videos/coverr-newborn-baby-s-bedroom-6646/1080p.mp4"
