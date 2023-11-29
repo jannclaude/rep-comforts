@@ -4,8 +4,6 @@ import { FaPlus, FaMinus } from "react-icons/fa";
 
 const CartItem = ({ cartItem, onDelete, onIncrement, onDecrement }) => {
 
-	
-
 	return (
 		<ListGroup.Item key={cartItem._id}>
 			{cartItem.prodInfo.map((prodItem) => (

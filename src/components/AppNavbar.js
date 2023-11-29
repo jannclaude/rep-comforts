@@ -122,12 +122,12 @@ export default function NavScroll() {
  	const handleCloseModal = () => setShowModal(false);
 
 	return (
-		<Navbar fixed="top" className="bg-transparent" expand="md">
+		<Navbar fixed="top" className="bg-transparent flexnav" expand="md">
 			<Container fluid className="bg-transparent">
 			<Navbar.Brand as={Link} to="/" exact className="bg-transparent"><img src="../logo192.png" height="90px" className="ps-3 bg-transparent" alt="logo"/></Navbar.Brand>
 			<Navbar.Toggle aria-controls="navbarScroll" className="navbar-toggler"><HiMenu size={25} className="bg-transparent"/></Navbar.Toggle>
 			<Navbar.Collapse className="bg-transparent" id="navbarScroll">
-				<Nav className="searchNav ms-auto gap-2 my-2 my-lg-0 bg-transparent" style={{ maxHeight: '100px' }} navbarScroll>
+				<Nav className="searchNav ms-auto gap-2 my-2 my-lg-0 bg-transparent" style={{ maxHeight: '100px', overflow: 'visible' }} navbarScroll>
 					<Form className="position-relative">
 						<Form.Control
 							type="search"
@@ -136,17 +136,30 @@ export default function NavScroll() {
 							aria-label="Search"
 							value={searchQuery}
 							onChange={handleInputChange} />
-								<ListGroup className="position-absolute w-100 mt-1" style={{ zIndex: 1000 }}>
-									{searchResult.map(product => (
-										<DropdownList prodProp={product} key={product.id} />
-									))}
-								</ListGroup>
+							<ListGroup className="position-absolute w-100 mt-1" style={{ zIndex: 1, overflow: 'visible !important' }}>
+								{searchResult.map(product => (
+									<DropdownList prodProp={product} key={product.id} />
+								))}
+							</ListGroup>
 					</Form>
 					<Button className="defaultButton" onClick={handleSearch}>Search</Button>
-
 				</Nav>
 				<Form className="d-flex ms-auto my-2 gap-3 pe-3 bg-transparent">
-					<NavDropdown title=<RiAccountBoxFill size={25}/> id="navbarScrollingDropdown" align={{ md: 'end' }}>
+					{user.id !== null ?
+						user.isAdmin ?
+						<>
+							<Navbar.Text className="glow-text"> <strong>Hello, Admin!</strong> </Navbar.Text>
+						</>
+						:
+						<>
+							<Navbar.Text className="glow-text"> <strong>Hello, {user.firstName}!</strong> </Navbar.Text>
+						</>
+					:
+					<>
+						<Navbar.Text className="glow-text"> <strong>Hello, Guest!</strong> </Navbar.Text>
+					</>
+					}
+					<NavDropdown title=<RiAccountBoxFill size={25}/> className="align-self-center" id="navbarScrollingDropdown" align={{ md: 'end' }}>
 					{user.id !== null ?
 						user.isAdmin
 						? 

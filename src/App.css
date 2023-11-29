@@ -315,3 +315,21 @@ button:hover {
 	color: white;
 	opacity: 100%;
 }
+
+.glow-text {
+	text-shadow: 0px 3px 15px rgba(253, 253, 253, 1) !important;
+}
+
+.glow-box {
+	box-shadow: 0px 3px 15px rgba(253, 253, 253, 1) !important;
+}
+
+.flexnav{
+    -webkit-padding-start: 0px;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative; /* <-- Added */
+    z-index: 1; /* <-- Added */
+}

@@ -25,6 +25,7 @@ function App() {
 	const [user, setUser] = useState({
 		id: null,
 		isAdmin: null,
+		firstName: null
 	})
 
 	const unsetUser = () => {
@@ -45,6 +46,7 @@ function App() {
 			setUser({
 				id: data._id,
 				isAdmin: data.isAdmin,
+				firstName: data.firstName
 			});
 
 		} else {
@@ -52,6 +54,7 @@ function App() {
 			setUser({
 				id: null,
 				isAdmin: null,
+				firstName: null
 			})
 		}
 		})

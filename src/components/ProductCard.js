@@ -62,7 +62,7 @@ export default function ProductCard({prodProp}) {
 				<Card.Text className="truncate-text">{descriptionProduct}</Card.Text>
 			</Card.Body>
 			<Card.Footer className="d-flex p-3 align-items-center justify-content-between">
-					<p className="text-center mb-0"><strong>{price.toLocaleString('en-US', { style: 'currency', currency: 'PHP' })}</strong></p>
+					<p className="text-center mb-0 me-2"><strong>{price.toLocaleString('en-US', { style: 'currency', currency: 'PHP' })}</strong></p>
 					{isActive ? (
 
 						user.isAdmin ?

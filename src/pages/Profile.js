@@ -2,7 +2,9 @@ import {useState,useEffect, useContext} from 'react';
 import {Row, Col, Badge, Button, Modal, Form, FloatingLabel} from 'react-bootstrap';
 import UserContext from '../UserContext';
 import { Navigate } from 'react-router-dom';
-import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
+import { HiMail, HiPhone, HiLocationMarker, HiShoppingCart, HiCalendar } from "react-icons/hi";
+import { LuPackage } from "react-icons/lu";
+import { FaMoneyBill1Wave } from "react-icons/fa6";
 import { Card, ListGroup } from 'react-bootstrap';
 import CartItem from '../components/CartItem';
 import Swal from 'sweetalert2';
@@ -193,6 +195,26 @@ export default function Profile(){
 		updateProductQuantity(productId, 'decrement');
 	};
 
+	const formatDate = (dateString) => {
+		const dateObject = new Date(dateString);
+
+		return dateObject.toLocaleString('en-US', {
+			month: 'long',
+			day: 'numeric',
+			year: 'numeric',
+			hour: 'numeric',
+			minute: 'numeric',
+			hour12: true,
+		})
+	}
+
+	const calculateTotalSum = () => {
+		return details.cartArray.reduce((sum, cartItem) => {
+		  return sum + cartItem.prodInfo.reduce((itemSum, prodInfo) => {
+			return itemSum + prodInfo.totalPrice;
+		  }, 0);
+		}, 0);
+	  };
 
 
 	return (
@@ -229,6 +251,9 @@ export default function Profile(){
 										<Button className="ms-2 my-2 float-end border-success bg-success" disabled={details.cartArray.length === 0} onClick={handleOrderNow}>
 											Order Now
 										</Button>
+										<Card.Text className="mt-3">
+											<strong>Total:</strong> {calculateTotalSum().toLocaleString('en-US', { style: 'currency', currency: 'PHP' })}
+										</Card.Text>
 									</Card.Footer>
 								</Card>
 							</div>
@@ -242,10 +267,14 @@ export default function Profile(){
 									<ListGroup>
 									{details.orderArray.map((order) => (
 										<ListGroup.Item key={order._id.$oid} className="p-4">
-											<h6><strong>Order ID:</strong> {order._id}</h6>
+											<h6>
+												<HiShoppingCart size={18} /> <strong>Order ID:</strong> {order._id}
+												<p><HiCalendar size={18} /> Ordered on {formatDate(order.addedOn)}</p>
+											</h6>
+
 											<ul className="list-unstyled">
 												<li>
-													<span>Products:</span>
+													<span><LuPackage size={18} /> <strong>Products:</strong></span>
 													<ul className="list-unstyled ms-3">
 													{order.nameProduct.map((productName, index) => (
 													<li className="d-flex align-items-center justify-content-start" key={index}>
@@ -253,7 +282,7 @@ export default function Profile(){
 															{productName}
 														
 														<Badge className="ms-1 align-middle" bg="primary" pill>
-															{order.cartQuantity[index]} item(s)
+														{order.cartQuantity[index]} {order.cartQuantity[index] > 1 ? 'items' : 'item'}
 														</Badge>
 														</span>
 													</li>
@@ -261,7 +290,7 @@ export default function Profile(){
 													</ul>
 												</li>
 											</ul>
-											<h6><strong>Total:</strong> {order.totalPrice.toLocaleString('en-US', { style: 'currency', currency: 'PHP' })}</h6>
+											<h6><FaMoneyBill1Wave size={18} /> <strong>Total:</strong> {order.totalPrice.toLocaleString('en-US', { style: 'currency', currency: 'PHP' })}</h6>
 											<span className="float-end">
 												<Badge bg="success" pill>
 													{order.paymentStatus}
