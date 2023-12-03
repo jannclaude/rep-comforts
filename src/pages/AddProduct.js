@@ -106,31 +106,32 @@ export default function AddProduct(){
             <Form className="addForm" onSubmit={e => createCourse(e)}>
                 <Form.Group>
                     <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Name" required value={nameProduct} onChange={e => {setNameProduct(e.target.value)}}/>
+                    <Form.Control type="text" placeholder="'Kitchen Table',   'Bathroom Towel',   'Single-size Bed'" required value={nameProduct} onChange={e => {setNameProduct(e.target.value)}}/>
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Description</Form.Label>
-                    <Form.Control as="textarea" rows={3} placeholder="Enter Description" required value={descriptionProduct} onChange={e => {setDescriptionProduct(e.target.value)}}/>
+                    <Form.Label className="mt-3">Description</Form.Label>
+                    <Form.Control as="textarea" rows={3} placeholder="Write a catchy and informative product description here..." required value={descriptionProduct} onChange={e => {setDescriptionProduct(e.target.value)}}/>
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Price</Form.Label>
+                    <Form.Label className="mt-3">Price</Form.Label>
                     <Form.Control type="number" placeholder="Enter Price" required value={price} onChange={e => {setPrice(e.target.value)}}/>
                 </Form.Group>
 				<Form.Group>
-                    <Form.Label>Brand</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Brand" required value={brand} onChange={e => {setBrand(e.target.value)}}/>
+                    <Form.Label className="mt-3">Brand</Form.Label>
+                    <Form.Control type="text" placeholder="'IKEA',   'Haier',   'Bosch'" required value={brand} onChange={e => {setBrand(e.target.value)}}/>
                 </Form.Group>
 				<Form.Group>
-                    <Form.Label>Stocks</Form.Label>
+                    <Form.Label className="mt-3">Stocks</Form.Label>
                     <Form.Control type="number" placeholder="Enter Stock" required value={prodStock} onChange={e => {setProdStock(e.target.value)}}/>
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Category</Form.Label>
+                    <Form.Label className="mt-3">Category</Form.Label>
                     <Form.Control
                         as="select"
                         value={category}
                         onChange={e => setCategory(e.target.value)}
                         required>
+                        <option value="" disabled>Select Category</option>
                         <option value="Bathroom">Bathroom</option>
                         <option value="Bedroom">Bedroom</option>
                         <option value="Cleaning">Cleaning</option>
@@ -143,8 +144,8 @@ export default function AddProduct(){
                     </Form.Control>
                 </Form.Group>
 				<Form.Group>
-                    <Form.Label>Image URL</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Image URL" required value={image} onChange={e => {setImage(e.target.value)}}/>
+                    <Form.Label className="mt-3">Image URL</Form.Label>
+                    <Form.Control type="text" placeholder="https://" required value={image} onChange={e => {setImage(e.target.value)}}/>
                 </Form.Group>
                 {
                 	isButtonActive
