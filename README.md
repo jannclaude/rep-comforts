@@ -36,13 +36,29 @@ This project was developed using the MERN (MongoDB, Express.js, React.js, Node.j
 
 ## Technologies Used
 
--[React.js](): Frontend library for building user interfaces.
--[Node.js](): Server-side JavaScript runtime.
--[Express.js](): Web application framework for Node.js.
--[MongoDB](): NoSQL database for storing product and user information.
--[SweetAlert](): A library for beautiful, responsive, and customizable alert dialogs.
--[Render](): A rendering service for deploying and scaling web applications.
--[Vercel](): A platform for hosting and deploying web applications.
--[Bootstrap](): Frontend framework for designing responsive and mobile-first websites.
+- [React.js](https://react.dev/): Frontend library for building user interfaces.
+- [Node.js](https://nodejs.org/): Server-side JavaScript runtime.
+- [Express.js](https://expressjs.com/): Web application framework for Node.js.
+- [MongoDB](https://www.mongodb.com/): NoSQL database for storing product and user information.
+- [SweetAlert](https://sweetalert2.github.io/): A library for beautiful, responsive, and customizable alert dialogs.
+- [Render](https://render.com/): A rendering service for deploying and scaling web applications.
+- [Vercel](https://vercel.com/): A platform for hosting and deploying web applications.
+- [Bootstrap](https://react-bootstrap.netlify.app/): Frontend framework for designing responsive and mobile-first websites.
 
+## Setup
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/jannclaude/rep-comforts.git
+   
+2. Install dependencies:
+
+   ```bash
+   npm install
+   
+3. Start the web app:
+
+   ```bash
+   npm start
 
