@@ -56,8 +56,10 @@ This project was developed using the MERN (MongoDB, Express.js, React.js, Node.j
 
    ```bash
    npm install
+
+3. Set your API server URL in `.env.local` file by using environment variable `REACT_APP_API_URL`
    
-3. Start the web app:
+4. Start the web app:
 
    ```bash
    npm start
