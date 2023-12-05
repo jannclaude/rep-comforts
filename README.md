@@ -64,3 +64,17 @@ This project was developed using the MERN (MongoDB, Express.js, React.js, Node.j
    ```bash
    npm start
 
+## Screenshots
+
+<table>
+   <tr style="border: 0px !important">
+      <td style="border: 0px !important" rowspan="2"><img width="500" src="https://github.com/jannclaude/rep-comforts/blob/master/images/screenshot1.jpg" /></td>
+      <td style="border: 0px !important"><img width="425" src="https://github.com/jannclaude/rep-comforts/blob/master/images/screenshot2.jpg" /></td>
+   </tr>
+   <tr style="border: 0px !important">
+      <td style="border: 0px !important"><img width="425" src="https://github.com/jannclaude/rep-comforts/blob/master/images/screenshot3.jpg" /></td>
+   </tr>
+   <tr style="border: 0px !important">
+      <td style="border: 0px !important" colspan="2"><img width="100%" src="https://github.com/jannclaude/rep-comforts/blob/master/images/screenshot4.jpg" /></td>
+   </tr>
+</table>
