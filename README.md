@@ -4,9 +4,9 @@
    <img width="200" alt="portfolio_view" src="https://github.com/jannclaude/rep-comforts/blob/master/public/favicon.ico">
 </p>
 
-This project was developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack to provide a seamless and responsive online shopping experience.
+West Coast Comforts stands as an e-commerce platform specializing in the sale of household appliances and furniture. Employing the MERN stack—MongoDB, Express.js, React.js, and Node.js—the project has been meticulously crafted, with React.js serving as the primary framework. This strategic stack integration ensures a smooth and adaptive online shopping journey for users.
 
-The website's backend API is hosted on Render, providing the necessary services for interacting with the server data.
+Additionally, the backend API of the website is hosted on Render, delivering essential services for seamless interactions with server data, enhancing the overall functionality of the platform.
 
 ## Table of Contents
 - [Overview](#overview)
