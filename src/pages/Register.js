@@ -150,7 +150,7 @@ export default function Register() {
 					<Form.Group className="mb-3">
 						<Form.Control 
 						type="number" 
-						placeholder="Enter 11 Digit No." 
+						placeholder="Enter 11 Digit Phone No." 
 						required
 						value={mobileNo}
 						className="w-50"
