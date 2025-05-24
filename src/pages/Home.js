@@ -8,7 +8,7 @@ import { useContext } from 'react';
 export default function Home() {
 
 	const data = {
-		title: "Check our products that people loves!",
+		title: "Check our products that people love!",
 		content: "Need inspiration on what to get for your home? We've curated our most popular products here.",
 		destination: "/products",
 		label: "Discover Products"
