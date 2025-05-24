@@ -119,7 +119,7 @@ export default function Login() {
 					<Form.Group className="mt-4 mb-3" controlId="userEmail">
 						<Form.Control
 							type="email"
-							placeholder="Enter email"
+							placeholder="Enter Email"
 							value={email}
 							className="w-50"
 							onChange={(e) => setEmail(e.target.value)}
