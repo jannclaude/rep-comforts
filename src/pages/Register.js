@@ -120,7 +120,7 @@ export default function Register() {
 					<Form.Group className="mt-4 mb-3">
 						<Form.Control 
 						type="text" 
-						placeholder="Enter First Name" 
+						placeholder="First Name" 
 						required
 						value={firstName}
 						className="w-50"
@@ -130,7 +130,7 @@ export default function Register() {
 					<Form.Group className="mb-3">
 						<Form.Control 
 						type="text" 
-						placeholder="Enter Last Name" 
+						placeholder="Last Name" 
 						required
 						value={lastName}
 						className="w-50"
@@ -140,7 +140,7 @@ export default function Register() {
 					<Form.Group className="mb-3">
 						<Form.Control 
 						type="email" 
-						placeholder="Enter Email" 
+						placeholder="Email Address" 
 						required
 						value={email}
 						className="w-50"
@@ -150,7 +150,7 @@ export default function Register() {
 					<Form.Group className="mb-3">
 						<Form.Control 
 						type="number" 
-						placeholder="Enter 11 Digit Phone No." 
+						placeholder="Phone No." 
 						required
 						value={mobileNo}
 						className="w-50"
@@ -160,7 +160,7 @@ export default function Register() {
 					<Form.Group className="mb-3">
 						<Form.Control 
 						type="text" 
-						placeholder="Enter Address" 
+						placeholder="Shipping Address" 
 						required
 						value={shippingAddress}
 						className="w-50"
@@ -170,7 +170,7 @@ export default function Register() {
 					<Form.Group className="mb-3">
 						<Form.Control 
 						type="password" 
-						placeholder="Enter Password" 
+						placeholder="Password" 
 						required
 						value={password}
 						className="w-50"
